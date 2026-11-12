@@ -1,0 +1,246 @@
+/* ==========================================================================
+   KOS SURVIVAL - RETRO ARCADE PIXEL ART STYLESHEET (8-BIT / 16-BIT)
+   Fonts: 'Press Start 2P' (Arcade Pixel) & 'Silkscreen'
+   ========================================================================== */
+
+@font-face {
+    font-family: 'Press Start 2P';
+    src: url('../fonts/PressStart2P-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Silkscreen';
+    src: url('../fonts/Silkscreen-Regular.ttf');
+}
+
+.root {
+    -fx-font-family: "Press Start 2P", "PressStart2P-Regular", "Silkscreen", monospace;
+}
+
+/* --------------------------------------------------------------------------
+   SUPER EYECATCHING ALL-YELLOW RETRO ARCADE 3D PIXEL TITLE LOGO
+   Modeled directly after the massive golden 3D pixel title in retro games
+   -------------------------------------------------------------------------- */
+
+/* Header Bracket Atas: [ ✦ SEMESTER 3 PRESENTS ✦ ] */
+.pixel-title-badge {
+    -fx-font-family: "Press Start 2P", "PressStart2P-Regular", monospace;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #ffeaa7;
+    -fx-effect: dropshadow(one-pass-box, #000000, 0, 0, 3, 3);
+}
+
+/* Kata 1: "KOS" (88px Enormous Pure Golden-Yellow 3D Block Pixel) */
+.pixel-title-main,
+.citampi-title-text {
+    -fx-font-family: "Press Start 2P", "PressStart2P-Regular", monospace;
+    -fx-font-size: 88px;
+    -fx-font-weight: bold;
+    -fx-fill: linear-gradient(to bottom, #ffffff 0%, #fffb46 25%, #ffeaa7 50%, #ffd32a 75%, #f9ca24 100%);
+    -fx-stroke: #1a1200;
+    -fx-stroke-width: 6px;
+    -fx-stroke-type: outside;
+    -fx-stroke-line-join: bevel;
+    -fx-effect: dropshadow(one-pass-box, #0a0600, 0, 0, 9, 9);
+}
+
+/* Kata 2: "SURVIVAL" (60px Big Pure Golden-Yellow 3D Block Pixel) */
+.pixel-title-main-sub,
+.pixel-title-sub,
+.citampi-subtitle-text {
+    -fx-font-family: "Press Start 2P", "PressStart2P-Regular", monospace;
+    -fx-font-size: 60px;
+    -fx-font-weight: bold;
+    -fx-fill: linear-gradient(to bottom, #ffffff 0%, #fffb46 25%, #ffeaa7 50%, #ffd32a 75%, #f9ca24 100%);
+    -fx-stroke: #1a1200;
+    -fx-stroke-width: 5px;
+    -fx-stroke-type: outside;
+    -fx-stroke-line-join: bevel;
+    -fx-effect: dropshadow(one-pass-box, #0a0600, 0, 0, 8, 8);
+}
+
+/* Tagline Bracket Bawah: [ ★ 30 DAYS STUDENT LIFE SIMULATOR ★ ] */
+.pixel-title-tagline {
+    -fx-font-family: "Press Start 2P", "PressStart2P-Regular", monospace;
+    -fx-font-size: 12.5px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #ffd32a;
+    -fx-effect: dropshadow(one-pass-box, #000000, 0, 0, 3, 3);
+}
+
+/* --------------------------------------------------------------------------
+   TOMBOL RETRO ARCADE PIXEL ART (MATCHING [ START ] GREEN ARCADE BUTTON)
+   -------------------------------------------------------------------------- */
+
+/* Tombol Utama Hijau Retro Arcade [ START GAME ] */
+.pixel-btn-start,
+.citampi-btn {
+    -fx-background-color: #0b2e13, #2ed573, #1e8449, #27ae60;
+    -fx-background-insets: 0, 3, 6, 7;
+    -fx-background-radius: 6px;
+    -fx-text-fill: #ffffff;
+    -fx-font-family: "Press Start 2P", "PressStart2P-Regular", monospace;
+    -fx-font-size: 15.5px;
+    -fx-font-weight: bold;
+    -fx-padding: 14px 28px;
+    -fx-cursor: hand;
+    -fx-alignment: center;
+    -fx-effect: dropshadow(one-pass-box, #041408, 0, 0, 5, 5);
+}
+
+.pixel-btn-start:hover,
+.citampi-btn:hover {
+    -fx-background-color: #051a0b, #7bed9f, #2ecc71, #2ed573;
+    -fx-scale-x: 1.04;
+    -fx-scale-y: 1.04;
+    -fx-effect: dropshadow(one-pass-box, #2ed573, 0, 0, 7, 7);
+}
+
+.pixel-btn-start:pressed,
+.citampi-btn:pressed {
+    -fx-background-color: #051a0b, #1e8449, #196f3d, #1e8449;
+    -fx-translate-y: 3px;
+    -fx-scale-x: 1.0;
+    -fx-scale-y: 1.0;
+    -fx-effect: dropshadow(one-pass-box, #041408, 0, 0, 2, 2);
+}
+
+/* Tombol Sekunder Oranye Arcade [ LOAD GAME / GUIDE ] */
+.pixel-btn-secondary {
+    -fx-background-color: #3b1802, #fbc531, #d35400, #e67e22;
+    -fx-background-insets: 0, 3, 6, 7;
+    -fx-background-radius: 6px;
+    -fx-text-fill: #ffffff;
+    -fx-font-family: "Press Start 2P", "PressStart2P-Regular", monospace;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-padding: 13px 26px;
+    -fx-cursor: hand;
+    -fx-alignment: center;
+    -fx-effect: dropshadow(one-pass-box, #1b0a00, 0, 0, 5, 5);
+}
+
+.pixel-btn-secondary:hover {
+    -fx-background-color: #1f0c01, #fed330, #e67e22, #f39c12;
+    -fx-scale-x: 1.04;
+    -fx-scale-y: 1.04;
+    -fx-effect: dropshadow(one-pass-box, #f39c12, 0, 0, 6, 6);
+}
+
+.pixel-btn-secondary:pressed {
+    -fx-translate-y: 3px;
+    -fx-scale-x: 1.0;
+    -fx-scale-y: 1.0;
+}
+
+/* Tombol Kecil Sudut Arcade (Credits, Tutorial, Reset) */
+.pixel-btn-small,
+.citampi-btn-small {
+    -fx-background-color: #1e272e, #718093, #2f3640, #353b48;
+    -fx-background-insets: 0, 2, 4, 5;
+    -fx-background-radius: 4px;
+    -fx-text-fill: #f5f6fa;
+    -fx-font-family: "Press Start 2P", "PressStart2P-Regular", monospace;
+    -fx-font-size: 10.5px;
+    -fx-font-weight: bold;
+    -fx-padding: 8px 14px;
+    -fx-cursor: hand;
+    -fx-alignment: center;
+    -fx-text-alignment: center;
+    -fx-effect: dropshadow(one-pass-box, #0c1013, 0, 0, 3, 3);
+}
+
+.pixel-btn-small:hover,
+.citampi-btn-small:hover {
+    -fx-background-color: #0f1418, #dcdde1, #353b48, #485460;
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+}
+
+/* Tombol Ikon Bendera Indonesia */
+.citampi-flag-btn {
+    -fx-background-color: #1e272e, #fbc531, #d35400;
+    -fx-background-insets: 0, 2, 3;
+    -fx-background-radius: 4px;
+    -fx-padding: 4px;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(one-pass-box, #000, 0, 0, 3, 3);
+}
+
+/* --------------------------------------------------------------------------
+   TEKS STATUS & HEADER POJOK KANAN ATAS
+   -------------------------------------------------------------------------- */
+.citampi-header-info {
+    -fx-font-family: "Press Start 2P", "PressStart2P-Regular", monospace;
+    -fx-font-size: 10px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #1e272e;
+    -fx-effect: dropshadow(one-pass-box, #ffffff, 0, 0, 1.5, 1.5);
+}
+
+/* --------------------------------------------------------------------------
+   LOADING BAR RETRO ARCADE
+   -------------------------------------------------------------------------- */
+.citampi-progress-bar {
+    -fx-background-color: #11151a;
+    -fx-border-color: #ffffff, #1e272e;
+    -fx-border-width: 3px;
+    -fx-border-radius: 4px;
+    -fx-background-radius: 4px;
+    -fx-padding: 3px;
+    -fx-effect: dropshadow(one-pass-box, #000, 0, 0, 4, 4);
+}
+
+.citampi-progress-bar .bar {
+    -fx-background-color: linear-gradient(to right, #00b894, #2ecc71, #55efc4);
+    -fx-background-radius: 2px;
+}
+
+/* --------------------------------------------------------------------------
+   HUD STATUS INDIKATOR & PANEL GAMEPLAY
+   -------------------------------------------------------------------------- */
+.hud-title {
+    -fx-font-family: "Press Start 2P", "PressStart2P-Regular", monospace;
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #f1c40f;
+    -fx-effect: dropshadow(one-pass-box, #000, 0, 0, 2, 2);
+}
+
+.hud-label {
+    -fx-font-family: "Press Start 2P", "PressStart2P-Regular", monospace;
+    -fx-font-size: 10.5px;
+    -fx-text-fill: #ffffff;
+    -fx-effect: dropshadow(one-pass-box, #000, 0, 0, 1.5, 1.5);
+}
+
+.hud-progress-energy .bar {
+    -fx-background-color: #2ecc71;
+    -fx-background-radius: 2px;
+}
+
+.hud-progress-money .bar {
+    -fx-background-color: #f1c40f;
+    -fx-background-radius: 2px;
+}
+
+.hud-progress-stress .bar {
+    -fx-background-color: #e74c3c;
+    -fx-background-radius: 2px;
+}
+
+.hud-progress-academic .bar {
+    -fx-background-color: #3498db;
+    -fx-background-radius: 2px;
+}
+
+.retro-card {
+    -fx-background-color: #fdfbf7;
+    -fx-border-color: #2c3e50;
+    -fx-border-width: 4px;
+    -fx-border-radius: 6px;
+    -fx-background-radius: 6px;
+    -fx-padding: 20px;
+    -fx-effect: dropshadow(one-pass-box, #000000, 0, 0, 8, 8);
+}

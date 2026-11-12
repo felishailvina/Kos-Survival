@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Priority?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.kossurvival.controller.GameplayController"
+            prefWidth="960.0" prefHeight="540.0"
+            style="-fx-background-color: #1e272e;">
+
+    <!-- TOP BAR NAVIGASI & HARI -->
+    <top>
+        <HBox alignment="CENTER_LEFT" spacing="14.0"
+              style="-fx-background-color: #0f1418; -fx-border-color: transparent transparent #2f3542 transparent; -fx-border-width: 3px;">
+            <padding>
+                <Insets top="10.0" right="18.0" bottom="10.0" left="18.0" />
+            </padding>
+
+            <Button text="⬅ MENU UTAMA" onAction="#handleBackToMenu"
+                    style="-fx-background-color: #2f3542; -fx-text-fill: white; -fx-font-family: 'Press Start 2P', monospace; -fx-font-size: 10.5px; -fx-cursor: hand; -fx-padding: 7 14; -fx-border-color: #718093; -fx-border-width: 1.5px; -fx-border-radius: 4px; -fx-background-radius: 4px;" />
+
+            <Button text="🔄 RESET GAME" onAction="#handleResetGame"
+                    style="-fx-background-color: #c0392b; -fx-text-fill: white; -fx-font-family: 'Press Start 2P', monospace; -fx-font-size: 10.5px; -fx-cursor: hand; -fx-padding: 7 14; -fx-border-color: #e74c3c; -fx-border-width: 1.5px; -fx-border-radius: 4px; -fx-background-radius: 4px;" />
+
+            <Region HBox.hgrow="ALWAYS" />
+
+            <Label fx:id="hariLabel" text="HARI KE-1 / 30"
+                   style="-fx-font-family: 'Press Start 2P', monospace; -fx-font-size: 14px; -fx-font-weight: bold; -fx-text-fill: #f1c40f; -fx-effect: dropshadow(one-pass-box, #000, 0, 0, 2, 2);" />
+        </HBox>
+    </top>
+
+    <!-- CENTER AREA: HUB + TOMBOL AKSI DI KIRI & STATUS HUD DI KANAN -->
+    <center>
+        <StackPane fx:id="centerStack">
+            <HBox spacing="14.0">
+                <padding>
+                    <Insets top="10.0" right="14.0" bottom="12.0" left="14.0" />
+                </padding>
+
+                <!-- SISI KIRI: HUB KAMAR KOS & TOMBOL AKSI -->
+                <VBox HBox.hgrow="ALWAYS" alignment="TOP_CENTER" spacing="10.0"
+                      style="-fx-background-color: #242f38; -fx-border-color: #3d566e; -fx-border-width: 2px; -fx-border-radius: 6px; -fx-background-radius: 6px;">
+                    <padding>
+                        <Insets top="8.0" right="8.0" bottom="8.0" left="8.0" />
+                    </padding>
+
+                    <!-- Ilustrasi Kamar Kos -->
+                    <StackPane prefHeight="170.0"
+                               style="-fx-background-color: #2f3640; -fx-border-color: #718093; -fx-border-width: 1.5px; -fx-border-radius: 4px; -fx-background-radius: 4px;">
+                        <VBox alignment="CENTER" spacing="8.0">
+                            <HBox alignment="CENTER" spacing="28.0">
+                                <ImageView fx:id="studentRoomView" />
+                                <ImageView fx:id="catRoomView" />
+                            </HBox>
+                            <Label text="🏠 KAMAR KOS MAHASISWA (MAIN HUB)"
+                                   style="-fx-font-family: 'Press Start 2P', monospace; -fx-font-size: 11px; -fx-text-fill: #f5f6fa; -fx-effect: dropshadow(one-pass-box, #000, 0, 0, 2, 2);" />
+                        </VBox>
+                    </StackPane>
+
+                    <!-- Grid Tombol Point & Click Aktivitas -->
+                    <GridPane alignment="CENTER" hgap="10.0" vgap="8.0">
+                        <Button text="🎓 Kuliah &amp; Tugas&#10;En-20 St+15 Nil+10"
+                                prefWidth="240.0" prefHeight="50.0"
+                                onAction="#handleKuliah"
+                                style="-fx-background-color: #2980b9; -fx-text-fill: white; -fx-font-family: 'Press Start 2P', monospace; -fx-font-size: 9.5px; -fx-line-spacing: 4px; -fx-cursor: hand; -fx-border-color: white; -fx-border-width: 1.5px; -fx-border-radius: 4px; -fx-background-radius: 4px;"
+                                GridPane.columnIndex="0" GridPane.rowIndex="0" />
+
+                        <Button text="💼 Kerja Part-Time&#10;+Rp75k En-25 St+10"
+                                prefWidth="240.0" prefHeight="50.0"
+                                onAction="#handleKerja"
+                                style="-fx-background-color: #27ae60; -fx-text-fill: white; -fx-font-family: 'Press Start 2P', monospace; -fx-font-size: 9.5px; -fx-line-spacing: 4px; -fx-cursor: hand; -fx-border-color: white; -fx-border-width: 1.5px; -fx-border-radius: 4px; -fx-background-radius: 4px;"
+                                GridPane.columnIndex="1" GridPane.rowIndex="0" />
+
+                        <Button text="🍜 Makan Warteg&#10;En+20 Uang-Rp15k"
+                                prefWidth="240.0" prefHeight="50.0"
+                                onAction="#handleMakan"
+                                style="-fx-background-color: #e67e22; -fx-text-fill: white; -fx-font-family: 'Press Start 2P', monospace; -fx-font-size: 9.5px; -fx-line-spacing: 4px; -fx-cursor: hand; -fx-border-color: white; -fx-border-width: 1.5px; -fx-border-radius: 4px; -fx-background-radius: 4px;"
+                                GridPane.columnIndex="0" GridPane.rowIndex="1" />
+
+                        <Button text="🎮 Main Game&#10;St-30 En-10 Nil-5"
+                                prefWidth="240.0" prefHeight="50.0"
+                                onAction="#handleGame"
+                                style="-fx-background-color: #8e44ad; -fx-text-fill: white; -fx-font-family: 'Press Start 2P', monospace; -fx-font-size: 9.5px; -fx-line-spacing: 4px; -fx-cursor: hand; -fx-border-color: white; -fx-border-width: 1.5px; -fx-border-radius: 4px; -fx-background-radius: 4px;"
+                                GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+                        <Button text="💤 Tidur (Ganti Hari Ke Depan)&#10;Energi +50, Stres -15, Hari +1"
+                                prefWidth="490.0" prefHeight="48.0"
+                                onAction="#handleTidur"
+                                style="-fx-background-color: #16a085; -fx-text-fill: white; -fx-font-family: 'Press Start 2P', monospace; -fx-font-size: 10px; -fx-line-spacing: 4px; -fx-cursor: hand; -fx-border-color: white; -fx-border-width: 1.5px; -fx-border-radius: 4px; -fx-background-radius: 4px;"
+                                GridPane.columnIndex="0" GridPane.rowIndex="2" GridPane.columnSpan="2" />
+                    </GridPane>
+                </VBox>
+
+                <!-- SISI KANAN: HUD STATUS & LOG RIWAYAT -->
+                <VBox prefWidth="380.0" spacing="8.0"
+                      style="-fx-background-color: #0f1418; -fx-border-color: #2f3542; -fx-border-width: 2px; -fx-border-radius: 6px; -fx-background-radius: 6px;">
+                    <padding>
+                        <Insets top="10.0" right="12.0" bottom="10.0" left="12.0" />
+                    </padding>
+
+                    <Label text="📊 STATUS MAHASISWA" styleClass="hud-title" />
+
+                    <!-- Saldo Uang -->
+                    <HBox alignment="CENTER_LEFT" spacing="8.0">
+                        <Label text="💰 Uang:" styleClass="hud-label" />
+                        <Label fx:id="uangLabel" text="Rp 1.500.000"
+                               style="-fx-font-family: 'Press Start 2P', monospace; -fx-font-size: 11px; -fx-font-weight: bold; -fx-text-fill: #2ecc71;" />
+                    </HBox>
+
+                    <!-- Bar Energi -->
+                    <Label fx:id="energiLabel" text="⚡ Energi: 100/100" styleClass="hud-label" style="-fx-text-fill: #2ecc71;" />
+                    <ProgressBar fx:id="energiBar" prefWidth="350.0" progress="1.0" prefHeight="13.0" styleClass="hud-progress-energy" />
+
+                    <!-- Bar Stres -->
+                    <Label fx:id="stresLabel" text="🤯 Stres: 0/100" styleClass="hud-label" style="-fx-text-fill: #e74c3c;" />
+                    <ProgressBar fx:id="stresBar" prefWidth="350.0" progress="0.0" prefHeight="13.0" styleClass="hud-progress-stress" />
+
+                    <!-- Bar Nilai Akademik -->
+                    <Label fx:id="nilaiLabel" text="🎓 Nilai Akademik: 50/100" styleClass="hud-label" style="-fx-text-fill: #3498db;" />
+                    <ProgressBar fx:id="nilaiBar" prefWidth="350.0" progress="0.5" prefHeight="13.0" styleClass="hud-progress-academic" />
+
+                    <Separator />
+
+                    <!-- Buku Harian ListView -->
+                    <Label text="📜 BUKU HARIAN AKTIVITAS" styleClass="hud-label" style="-fx-text-fill: #f1c40f;" />
+                    <ListView fx:id="logListView" prefHeight="135.0"
+                              style="-fx-font-family: 'Press Start 2P', monospace; -fx-font-size: 8.5px;" />
+                </VBox>
+
+            </HBox>
+        </StackPane>
+    </center>
+
+</BorderPane>

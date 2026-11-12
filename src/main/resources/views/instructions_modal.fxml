@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.geometry.Insets?>
+
+<StackPane xmlns="http://javafx.com/javafx/21"
+           xmlns:fx="http://javafx.com/fxml/1"
+           fx:controller="com.kossurvival.controller.InstructionsModalController"
+           prefWidth="960.0" prefHeight="540.0"
+           style="-fx-background-color: rgba(10, 15, 25, 0.85);"
+           alignment="CENTER">
+
+    <VBox alignment="TOP_CENTER" spacing="14.0" maxWidth="680.0" maxHeight="480.0"
+          styleClass="retro-card"
+          style="-fx-background-color: #fdf6e2; -fx-border-color: #2c3e50; -fx-border-width: 4px; -fx-border-radius: 8px; -fx-background-radius: 8px;">
+        <padding>
+            <Insets top="20.0" right="24.0" bottom="20.0" left="24.0" />
+        </padding>
+
+        <Label text="📖 PANDUAN KOS SURVIVAL &amp; 4 ENDINGS"
+               style="-fx-font-family: 'Press Start 2P', monospace; -fx-font-size: 13.5px; -fx-font-weight: bold; -fx-text-fill: #d35400; -fx-effect: dropshadow(one-pass-box, #f39c12, 0, 0, 1, 1);" />
+
+        <ScrollPane fitToWidth="true" prefHeight="330.0"
+                    style="-fx-background: transparent; -fx-background-color: transparent;">
+            <VBox spacing="14.0">
+                <Label text="🎮 CARA BERMAIN (POINT &amp; CLICK):"
+                       style="-fx-font-family: 'Press Start 2P', monospace; -fx-font-size: 11px; -fx-text-fill: #2c3e50;" />
+                <Label text="• Bertahan hidup selama 30 HARI di kosan!&#10;• Pilih tombol aktivitas Point &amp; Click untuk kelola status.&#10;• Waktu bertambah (+1 Hari) setiap kali kamu memilih 'Tidur'."
+                       wrapText="true"
+                       style="-fx-font-family: 'Press Start 2P', monospace; -fx-font-size: 9.5px; -fx-line-spacing: 6px; -fx-text-fill: #34495e;" />
+
+                <Label text="📊 STATUS MAHASISWA (0 - 100):"
+                       style="-fx-font-family: 'Press Start 2P', monospace; -fx-font-size: 11px; -fx-text-fill: #2c3e50;" />
+                <Label text="⚡ Energi : Habis saat kuliah/kerja/game, pulih saat makan/tidur.&#10;💰 Uang   : Bayar makan/kos, bertambah dari kerja part-time.&#10;🤯 Stres  : Naik saat belajar &amp; kerja, turun saat main game/tidur.&#10;🎓 Nilai  : Naik saat kuliah, turun bila terus main game."
+                       wrapText="true"
+                       style="-fx-font-family: 'Press Start 2P', monospace; -fx-font-size: 9.5px; -fx-line-spacing: 6px; -fx-text-fill: #34495e;" />
+
+                <Label text="🏆 4 KONDISI TAMAT (MULTIPLE ENDINGS):"
+                       style="-fx-font-family: 'Press Start 2P', monospace; -fx-font-size: 11px; -fx-text-fill: #d35400;" />
+                <Label text="1. 💀 Kalah (Tipes): Energi &lt;= 0 ATAU Stres &gt;= 100 (Masuk RS).&#10;2. 📦 Kalah (Diusir): Uang &lt;= 0 sebelum Hari 30 (Ngemper kerdus).&#10;3. 📄 Kalah (Drop Out): Nilai Akademik &lt;= 0 (Surat DO tiba).&#10;4. 🎓 Menang (Cumlaude): Bertahan 30 Hari, Nilai &gt;= 75!"
+                       wrapText="true"
+                       style="-fx-font-family: 'Press Start 2P', monospace; -fx-font-size: 9.5px; -fx-line-spacing: 6px; -fx-text-fill: #34495e;" />
+            </VBox>
+        </ScrollPane>
+
+        <HBox alignment="CENTER">
+            <Button text="▶ MENGERTI! TUTUP"
+                    styleClass="pixel-btn-start"
+                    onAction="#handleCloseModal"
+                    style="-fx-font-size: 12px; -fx-padding: 10px 24px;" />
+        </HBox>
+
+    </VBox>
+
+</StackPane>
