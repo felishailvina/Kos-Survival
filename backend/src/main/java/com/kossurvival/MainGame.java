@@ -1,3 +1,5 @@
+package com.kossurvival;
+
 public class MainGame extends Aktivitas {
 
     @Override

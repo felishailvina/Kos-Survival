@@ -1,3 +1,5 @@
+package com.kossurvival;
+
 public abstract class Aktivitas {
 
     // Method abstrak yang wajib diimplementasikan

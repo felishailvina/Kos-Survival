@@ -1,3 +1,4 @@
+package com.kossurvival;
 public class Mahasiswa {
 
     // Atribut private untuk enkapsulasi

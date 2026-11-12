@@ -1,3 +1,5 @@
+package com.kossurvival;
+
 import java.util.Scanner;
 
 public class Main {
@@ -23,11 +25,11 @@ public class Main {
             System.out.println("2. Kerja Part Time");
             System.out.println("3. Bermain Game");
             System.out.println("4. Tidur");
-System.out.println("5. Makan");
-System.out.println("6. Lihat Riwayat");
-System.out.println("7. Lihat Status");
-System.out.println("8. Reset Permainan");
-System.out.println("0. Keluar");
+            System.out.println("5. Makan");
+            System.out.println("6. Lihat Riwayat");
+            System.out.println("7. Lihat Status");
+            System.out.println("8. Reset Permainan");
+            System.out.println("0. Keluar");
             System.out.print("Pilih aktivitas: ");
 
             int pilihan;

@@ -1,3 +1,4 @@
+package com.kossurvival;
 public enum StatusEnding {
 
     BERLANJUT,

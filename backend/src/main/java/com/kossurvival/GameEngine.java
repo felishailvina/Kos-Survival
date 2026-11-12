@@ -1,3 +1,5 @@
+package com.kossurvival;
+
 public class GameEngine {
 
     // Objek utama permainan
